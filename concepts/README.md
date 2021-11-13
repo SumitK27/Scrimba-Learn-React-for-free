@@ -4,6 +4,7 @@
 2. [**Why React?**](#why-react)
    1. [**Composable**](#composable)
       1. [**Creating Components**](#creating-components)
+   2. [**Declarative**](#declarative)
 
 ---
 
@@ -94,4 +95,30 @@ ReactDOM.render(
     </div>,
     document.getElementById("root")
 );
+```
+
+## **Declarative**
+
+-   What should be done?
+    -   "Just tell me what to do, and I'll worry about how I get it done"
+
+**Declarative Way**
+
+```jsx
+ReactDOM.render(
+    <h1 className="header">Hello, React!</h1>,
+    document.getElementById("root")
+);
+```
+
+**Imperative Way**
+
+-   Have to tell each and every step of how to do it.
+
+```jsx
+const root = document.getElementById("root");
+const h1 = document.createElement("h1");
+h1.textContent = "Hello there!";
+h1.className = "header";
+root.appendChild(h1);
 ```
